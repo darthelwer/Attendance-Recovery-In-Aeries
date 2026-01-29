@@ -22,7 +22,8 @@ put the students and teachers in, then add the attendance. If you are capturing 
 was using a differnt check-in, check-out system so we had to import this data.
 
 Step 2 
-Run these two Aeries Queries below and save as CSV files
+Run these two Aeries Queries below and save as CSV files - keep in mind we are working with all day attendance per the ed code arround AR
+- this wont see if they have an absence only in 1 class 
 (I think I said in my original post these were SQL scrips but they are actually AQL - I was thinking of the ones above) 
 These queries are actually documented in the Python file as well under each function that uses them
    LIST ATD STU ATD.ID ATD.SC STU.SN ATD.DT ATD.TM ATD.SE
@@ -34,14 +35,15 @@ These queries are actually documented in the Python file as well under each func
 
 Step 3
 Run the python script, it will prompt you for two files which it will use to create members of a class called Student
+(https://github.com/darthelwer/Attendance-Recovery-In-Aeries/blob/main/AR%20and%20ABS.py)
 One of the peices of data it uses from the supplemental attendance is time. If the time is over 240 minutes (4 hours) it treats it as one day of AR.
 If less than 240 minutes it logs as partial and waits to add to another partial
 ***Please make sure your AR minutes are in 60 min blocks (per Ed Code we can only count the hours, if you do 40 minutues that = 0 hours recovered) 
 
 Step 4 
 That will generate an output file that looks like this
-STU.ID  STU.SC	STU.SN	ATT.DY	 ATT.ADA	  ATT.ADT	    ATT.ACO	                      SQL INPUT
-#####	  ###	    700	    8	       M	        7/24/2025	  Super Summer Camp:07/24/2025	(####,###,700,8,'M','2025-07-24','Super Summer Camp:07/24/2025')
+STU.ID  STU.SC	STU.SN	ATT.DY	 ATT.ADA	  ATT.ADT	    ATT.ACO	                      
+#####	  ###	    700	    8	       M	        7/24/2025	  Super Summer Camp:07/24/2025	
 
 Step 5 
 Creating the SQL input - we want that data to look like this (####,###,700,8,'M','2025-07-24','Super Summer Camp:07/24/2025')
