@@ -3,9 +3,9 @@ If you are here, you are interested in working with Areies and Attendance Recove
 want to say thanks and support my Dr Pepper Zero habit... send a venmo to @darthelwer.
 
 Originally i was told we only needed numbers not when they were applied. This was a fairly straight forward SQL script
-you can find here (https://github.com/darthelwer/Attendance-Recovery-In-Aeries/blob/main/Attendance%20Recovery%20Report%20(Detail).sql ) 
-and a second one that provides sums of AR days for each grade group - TK to 3, 4 to 6, and 7-8) 
-
+you can find here: (https://github.com/darthelwer/Attendance-Recovery-In-Aeries/blob/main/Attendance%20Recovery%20Report%20(Detail).sql ) 
+and a second one that provides sums of AR days for each grade group - TK to 3, 4 to 6, and 7-8)  
+(https://github.com/darthelwer/Attendance-Recovery-In-Aeries/blob/main/Attendance%20Recovery%20Report%20(Overview).sql)
 [We are PS to 8 district you would need to add the sum cases for upper grades]
 
 BUT then I was told we needed to actually match the dates of absense to the date(s) of the AR (some of our AR is only an
